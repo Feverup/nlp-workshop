@@ -52,11 +52,11 @@
 				</section>
 
 				<section data-background="img/norvig.jpg">
-                    <h2><p class="fragment"><a href="http://norvig.com/spell-correct.html">Peter Norvig</a></p></h2>
+                    <h1><p class="fragment"><a style="color:black" href="http://norvig.com/spell-correct.html">Peter Norvig</a></p></h1>
 				</section>
 
 				<section>
-					<h2>You can:</h2>
+					<h2>You can</h2>
 					<ul class="tutorial">
 						<li class="fragment"><img class="logo" width="50" height="50" data-src="img/python_logo.png" alt="Python"> Use the iPython notebook</li>
 						<li class="fragment"><img class="logo" width="50" height="50" data-src="img/vim_logo.png" alt="Python"> Use your editor + python</li>
@@ -74,8 +74,8 @@
 'paella'
                     </code></pre></h2>
                     <h2 style="text-transform: none" class="fragment"><pre><code class="hljs" data-trim contenteditable>
-> correct('xxxxxxxx')
-'xxxxxxxx'
+> correct('qwweqqwe')
+'qwweqqwe'
                     </code></pre></h2>
 				</section>
 
@@ -88,6 +88,78 @@ def correct(word):
                     </code></pre></h3>
 				</section> 
 
+				<section> 
+                    <h1>A little probabilty theory</h1> 
+                    <h4 class="fragment">(Don't run)</h4>
+				</section> 
+
+				<section style="text-align: left;">
+					<h2>PROBLEM</h2>
+					<p>
+                    - You can not be sure about the correction<br>
+                    - Maximize probabilities
+					</p>
+                </section>
+                  
+				<section data-background-transition="zoom"> 
+                    <section data-markdown>
+                        <script type="text/template">
+    Probability that a correction __*c*__ is good given a word __*w*__
+                        </script>
+                    </section>
+
+                    <section>
+                        <h2> p(c|w) </h2>
+                    </section>
+
+                    <section>
+                        <h2> p(umbrella|rain) </h2>
+                    </section>
+
+                    <section>
+                        <h2> argmax<sub>c</sub> = p(c|w) </h2>
+                        <h2 style="text-transform: none"><pre><code>
+    return max(candidates, ...)
+                        </code></pre></h3>
+
+                    </section>
+
+                    <section>
+                        <h3> Bayes' theorem </h3>
+                        <h2> p(c|w) = p(w|c) p(c) / p(w)</h2>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+    ## argmax<sub>c</sub> = p(w|c) p(c)
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                <ul>
+                    <li> <h2> argmax<sub>c</sub></h2> <p> Control mechanism. Enumerate all c to choose the one with the best probability.</p> </li>
+                    <li class="fragment"> <h2> P(c) </h2><p>Language model. Prob. of the use of the correction.</p> </li>
+                    <li class="fragment"> <h2> P(w|c)</h2> <p>Error model. Prob. that given a word w, the author meant c.</p> </li>
+                </ul>
+                </section>
+
+                <section>
+                    <h2> Language model </h2>
+                    <p> Let's define the probability of each word with a dictionary and train the model with a big text </p>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- EXAMPLES HERE -->
 				<!-- Example of nested vertical slides -->
 				<section>
 
@@ -143,17 +215,17 @@ def correct(word):
 
 				<section data-markdown>
 					<script type="text/template">
-						## Markdown support
+						## markdown support
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						write content using inline or external markdown.
+						instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
 
 						```
 						<section data-markdown>
-						  ## Markdown support
+						  ## markdown support
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						  write content using inline or external markdown.
+						  instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
 						</section>
 						```
 					</script>
@@ -405,10 +477,10 @@ Reveal.addEventListener( 'customevent', function() {
 				</section>
 
 				<section style="text-align: left;">
-					<h1>THE END</h1>
+					<h1>the end</h1>
 					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+						- <a href="http://slides.com">try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">source code &amp; documentation</a>
 					</p>
 				</section>
 
