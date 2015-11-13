@@ -9,7 +9,10 @@ def train(words):
         model[word] += 1
     return model
 
-NWORDS = train(words(open('/users/me/fever/workshops/nlp/data/conde_montecristo.txt', 'r').read()))
+NWORDS = train(words(open('data/conde_montecristo.txt', 'r').read()))
+
+
+
 
 alphabet = 'qwertyuiopasdfghjklzxcvbnm'
 
@@ -22,6 +25,11 @@ def edits_1(word):
     inserts = [a + c + b for a, b in splits for c in alphabet]
 
     return set(deletes + transposes + replaces)
+
+
+
+
+
 
 def known_edits_2(word):
     return set(e2 for e1 in edits_1(word) for e2 in edits_1(e1) if e2 in NWORDS)
