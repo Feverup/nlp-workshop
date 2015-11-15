@@ -9,6 +9,7 @@ There is no video of the talk, but if you want to follow it, there are several
 ways:
 
 * Install _ipython notebooks_ and open the __*.ipynb*__ file (recommended). There are more text and explanations than in the slides.
+* Use the [online render of the notebook](https://github.com/Feverup/nlp-workshop/blob/master/How%20to%20write%20a%20spelling%20corrector.ipynb)
 * Follow the [original paper](http://norvig.com/spell-correct.html). It's better than my talk, but it's written in Python 2.5. 
 
 If you don't like python, there are several implementations of this algorithm in other languages [__here__](http://norvig.com/spell-correct.html)
