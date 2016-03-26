@@ -14,9 +14,12 @@ ways:
 
 If you don't like python, there are several implementations of this algorithm in other languages [__here__](http://norvig.com/spell-correct.html)
 
+### Slides
+I have uploaded an alternate slides at [my slides page](http://slides.com/marcoherrero/nlp-spelling-corrector#/)
+
 ### Requirements:
 * python 2.7 or superior
 
-#### Errors
+#### Known errors
 There is a problem with reveal.js and I can't change the background color of the slides when exporting to pdf.
 
